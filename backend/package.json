@@ -1,15 +1,14 @@
 {
   "name": "backend",
-  "module": "index.ts",
-  "type": "module"
-  ,
-  "devDependencies": {
-    "@types/bun": "^1.2.4"
-  },
   "scripts": {
-    "dev": "bun run index.ts"
+    "dev": "bun run /src/index.ts",
+    "deploy": "wrangler deploy --minify"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "dependencies": {
+    "hono": "^4.7.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250214.0",
+    "wrangler": "^3.109.2"
   }
 }
